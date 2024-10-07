@@ -27,4 +27,4 @@ jobs:
       - name: Delete old container
         run: docker rm -f bookstore-backend-container
       - name: Run Docker Container
-        run: docker run -d -p 3001:3001 --name testing-backend-container -e MONGO_PASSWORD='${{ secrets.MONGO_URL }}' groothencoder/testing-backend
+        run: docker run -d -p 3001:3001 --name testing-backend-container -e MONGO_PASSWORD='${{ secrets.MONGO_PASSWORD }}' groothencoder/testing-backend
